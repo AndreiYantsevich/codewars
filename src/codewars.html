@@ -78,6 +78,24 @@
     function sum(numbers) {
         return numbers.reduce((a, b) => a + b, 0);
     }*/
+
+
+    /*//Are You Playing Banjo?
+    function areYouPlayingBanjo(name) {
+        return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+    }
+    areYouPlayingBanjo('Robert')*/
+
+
+    //Count by X
+    function countBy(x, n) {
+        const arr = [];
+        for (let i = 1; i <= n; i++) {
+            arr.push(x * i)
+        }
+        return arr;
+    }
+    countBy(2, 5);
 </script>
 
 </body>
