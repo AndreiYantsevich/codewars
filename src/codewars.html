@@ -98,11 +98,22 @@
     countBy(2, 5);*/
 
 
-    function sumMix(x){
+    /*function sumMix(x){
         debugger;
         return x.map(a => +a).reduce((a, b) => a + b);
     }
-    sumMix([9, 3, '7', '3'])
+    sumMix([9, 3, '7', '3'])*/
+
+
+    //Find the first non-consecutive number
+    function firstNonConsecutive(arr) {
+        for (let i = 0; i < arr.length - 1; ++i) {
+            if (arr[i] + 1 !== arr[i + 1]) {
+                return arr[i + 1]
+            }
+        }
+        return null
+    }
 </script>
 
 </body>
