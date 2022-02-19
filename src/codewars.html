@@ -8,8 +8,16 @@
 
 <body>
     <script>
-        //Remove an exclamation mark from the end of string
-        const remove = s => s.replace(/!$/, '');
+        //Lario and Muigi Pipe Problem
+        function pipeFix(numbers){
+            let a = numbers[0];
+            let b = numbers.slice(-1);
+            let result = []
+            for (let i = a; i <= b; i++) {
+                result.push(i)
+            }
+            return result;
+        }
     </script>
 
 </body>
