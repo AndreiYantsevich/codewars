@@ -8,12 +8,8 @@
 
 <body>
     <script>
-        //Sum without highest and lowest number
-        function sumArray(array) {
-            const sumNums = (acc, cur) => acc + cur
-            return Array.isArray(array) && array.length > 1
-                ? array.reduce(sumNums, 0) - Math.min(...array) - Math.max(...array)
-                : 0
+        function capitalizeWord(word) {
+            return `${word[0].toUpperCase()}${word.slice(1,)}`
         }
     </script>
 
