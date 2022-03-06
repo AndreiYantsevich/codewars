@@ -8,10 +8,19 @@
 
 <body>
     <script>
-        const unique = (arr) => {
-            return arr.filter((item, index, array) => (array.indexOf(item) === index))
-        }
-        console.log(unique([1, 1, 2, 2, 4, 2, 3, 7, 3]));
+       function flat(arr) {
+           let res = []
+           arr.forEach(item => {
+               if (Array.isArray(item)) {
+                   res = res.concat(flat(item))
+               } else {
+                   res.push(item)
+               }
+           })
+           return res
+       }
+
+       console.log(flat([1, [2, [3, [4,5]]]]))
     </script>
 
 </body>
