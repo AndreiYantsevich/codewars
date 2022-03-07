@@ -8,15 +8,25 @@
 
 <body>
 <script>
-    const array = [300, 500, 700, 900]
-        let customMap = (arr, fn) => {
-            let mappedArray = [];
-            for (let element of arr) {
-                mappedArray.push(fn(element))
+     const array = [300, 500, 700, 900]
+    //     let customMap = (arr, fn) => {
+    //         let mappedArray = [];
+    //         for (let element of arr) {
+    //             mappedArray.push(fn(element))
+    //         }
+    //         return mappedArray;
+    //     }
+    // console.log(customMap(array, (el) => {return el + 200}))
+    let customFilter = (arr, fn) => {
+         let filteredArray = []
+        for (let element of arr) {
+            if (fn(element)) {
+                filteredArray.push(element)
             }
-            return mappedArray;
         }
-    console.log(customMap(array, (el) => {return el + 200}))
+        return filteredArray
+    }
+     console.log(customFilter(array, (el) => {return el > 300}))
 </script>
 
 </body>
