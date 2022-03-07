@@ -7,21 +7,17 @@
 </head>
 
 <body>
-    <script>
-       function flat(arr) {
-           let res = []
-           arr.forEach(item => {
-               if (Array.isArray(item)) {
-                   res = res.concat(flat(item))
-               } else {
-                   res.push(item)
-               }
-           })
-           return res
-       }
-
-       console.log(flat([1, [2, [3, [4,5]]]]))
-    </script>
+<script>
+    const array = [300, 500, 700, 900]
+        let customMap = (arr, fn) => {
+            let mappedArray = [];
+            for (let element of arr) {
+                mappedArray.push(fn(element))
+            }
+            return mappedArray;
+        }
+    console.log(customMap(array, (el) => {return el + 200}))
+</script>
 
 </body>
 
