@@ -8,43 +8,9 @@
 
 <body>
 <script>
-     const array = [300, 500, 700, 900]
-    //     let customMap = (arr, fn) => {
-    //         let mappedArray = [];
-    //         for (let element of arr) {
-    //             mappedArray.push(fn(element))
-    //         }
-    //         return mappedArray;
-    //     }
-    // console.log(customMap(array, (el) => {return el + 200}))
-    // let customFilter = (arr, fn) => {
-    //      let filteredArray = []
-    //     for (let element of arr) {
-    //         if (fn(element)) {
-    //             filteredArray.push(element)
-    //         }
-    //     }
-    //     return filteredArray
-    // }
-    //  console.log(customFilter(array, (el) => {return el > 300}))
-     let obj = {
-         name: 'Andrey',
-         gender: 'Male',
-         someFn: function () {
-             console.log(`My name is:`, this)
-         }
-     }
-     let obj2 = {
-         name: 'Victoria',
-         gender: 'Female'
-     }
-     Function.prototype.customBind = function (context) {
-         let fn = this;
-         return function () {
-             fn.call(context)
-         }
-     }
-     console.log(obj.someFn.customBind(obj2)())
+    function mergeArrays(arr1, arr2) {
+        return Array.from(new Set(arr1.concat(arr2))).sort((a, b) => a - b)
+    }
 </script>
 
 </body>
