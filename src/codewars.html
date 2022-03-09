@@ -8,11 +8,12 @@
 
 <body>
 <script>
-    function arrayDiff(a, b) {
-    let result = a.filter(el => !b.includes(el));
-    return result
+    function highAndLow(numbers){
+        numbers = numbers.split(" ");
+        return Math.max(...numbers) +" "+ Math.min(...numbers);
     }
-    console.log(arrayDiff([1, 2, 3], [1, 2]));
+
+    console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
 </script>
 
 </body>
