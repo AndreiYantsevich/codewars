@@ -8,12 +8,18 @@
 
 <body>
 <script>
-    function highAndLow(numbers){
-        numbers = numbers.split(" ");
-        return Math.max(...numbers) +" "+ Math.min(...numbers);
+    function myFlat (arr) {
+        let result = []
+        arr.forEach((el) => {
+            if (Array.isArray(el)) {
+                result.push(...myFlat(el))
+            } else {
+                result.push(el)
+            }
+        })
+        return result;
     }
-
-    console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+    console.log(myFlat([1,2,3,[44,33,2],[493,20,1,[0,2,44]]]))
 </script>
 
 </body>
