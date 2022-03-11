@@ -8,18 +8,10 @@
 
 <body>
 <script>
-    function myFlat (arr) {
-        let result = []
-        arr.forEach((el) => {
-            if (Array.isArray(el)) {
-                result.push(...myFlat(el))
-            } else {
-                result.push(el)
-            }
-        })
-        return result;
+    function position(letter) {
+        let arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        return `Position of alphabet: ${arr.indexOf(letter) + 1}`;
     }
-    console.log(myFlat([1,2,3,[44,33,2],[493,20,1,[0,2,44]]]))
 </script>
 
 </body>
